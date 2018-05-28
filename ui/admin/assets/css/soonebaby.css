@@ -1,0 +1,49 @@
+@-webkit-keyframes loading {
+    0% {-webkit-transform: rotate(0deg); }
+    100% {-webkit-transform: rotate(360deg); }
+}
+@keyframes loading {
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
+}
+.zhuan11{ -webkit-animation: loading 1s infinite linear; animation: loading 1s infinite linear;}
+.jzr-form .image{ padding-bottom:1rem;}
+.jzr-form .image .left{ padding-left:1rem;}
+.jzr-form .image .img-add{ margin-top:1rem; position:relative; float:left; background:url(/ui/admin/assets/images/file-img.png) no-repeat #fff; background-size:100% 100%; width:8rem; height:8rem; margin-right:2.3rem;}
+.jzr-form .image .img-add img{ width:100%; height:100%; position:absolute; left:0; top:0; background:#fff;}
+.jzr-form .image .img-add input{  width:3.5rem; height:3.5rem; overflow:hidden; opacity:0; font-size:10rem;}
+.jzr-form .image .right{ width:25rem; }
+
+.ace-thumbnails img{ width:100px; height: 100px; cursor:zoom-in;}
+.jzr-form .image .img-add-photo{ margin-top:1rem; position:relative; float:left; background:url(/ui/admin/assets/images/photo.png) no-repeat #fff; background-size:100% 100%; width:3.5rem; height:3.5rem; margin-right:1rem;}
+.jzr-form .image .img-add-photo img{ width:100%; height:100%; position:absolute; left:0; top:0; background:#fff;}
+.jzr-form .image .img-add-photo input{  width:3.5rem; height:3.5rem; overflow:hidden; opacity:0; font-size:10rem;}
+/*图片弹出*/
+.img-pop2{ background:rgba(0,0,0,0.5); position:fixed; left:0; top:0; height:100%; width:100%; z-index:99;}
+.img-pop2 .img{ width:25rem; margin:0 auto; padding:1rem 0;}
+.img-pop2 .img img{ width:25rem; }
+.img-pop2 .btn{ width:25rem; margin:0 auto;}
+.img-pop2 .btn a{ display:block; background:#fff; text-align:center; width:7rem; border:1px solid #e1e1e1; line-height:3rem; border-radius:.3rem;}
+.fl{ float:left;}
+.fr{ float:right;}
+/*图片弹出*/
+
+
+/*title弹出曾*/
+div#tooltip {position:absolute; z-index:1000;width:auto!important;background:linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.9),rgba(255,255,255,1)); text-align:left; padding:5px 10px;border-radius:5px;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));
+    box-shadow:0 5px 20px #666;}
+div#tooltip p {color:#ff6700;font-size:12px;}
+div#tooltip p:after{
+    content:'';
+    width: 0;
+    height: 0;
+    position:absolute;
+    left:10%;
+    top:-8px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(255,255,255,0.95);
+}
+/*title弹出曾*/
+
