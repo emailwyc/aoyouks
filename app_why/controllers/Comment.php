@@ -56,7 +56,6 @@ class Comment extends TempBase{
 		$ip = get_client_ip();
 		$ipSearch = $this->CommentM->getDetailById('visit_logs',array('ip'=>$ip));
 		if($ipSearch){ $ipaddr = $ipSearch['addr']; }else{ $ipaddr = get_addr_by_ip($ip);}
-        echo $_REQUEST['callback']."(".json_encode(array($ip,$ipaddr)).")";exit;
 		$inArr = array('nickname'=>$params['nickname'],'content'=>$params['content'],'avatar'=>$params['avatar'],'aid'=>$params['aid'],'pid'=>$params['pid'],'email'=>$params['email'],'ip'=>$ip,'address'=>$ipaddr);
 		$inArr['type'] = empty($params['pid'])?1:2;
         $inArr['nickname'] = trim($inArr['nickname']);
