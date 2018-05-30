@@ -53,10 +53,11 @@ class Comment extends TempBase{
 	    $adminname = array("管理员","博主","SooneBaby","soonebaby","Soonebaby","管 理 员","系统管理员");
 		$params = $this->get;
 		$this->emptyCheck($params,array('content','nickname','avatar','aid','pid','email'));
-		$ip = getClientIp();
+		$ip = get_client_ip();
 		$ipSearch = $this->CommentM->getDetailById('visit_logs',array('ip'=>$ip));
 		if($ipSearch){ $ipaddr = $ipSearch['addr']; }else{ $ipaddr = get_addr_by_ip($ip);}
-
+print_r($ip);
+		print_r($ipaddr);exit;
 		$inArr = array('nickname'=>$params['nickname'],'content'=>$params['content'],'avatar'=>$params['avatar'],'aid'=>$params['aid'],'pid'=>$params['pid'],'email'=>$params['email'],'ip'=>$ip,'address'=>$ipaddr);
 		$inArr['type'] = empty($params['pid'])?1:2;
         $inArr['nickname'] = trim($inArr['nickname']);
